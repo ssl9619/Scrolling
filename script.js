@@ -33,10 +33,10 @@ function scrollPage(){
 
 // An array of stories as strings
 let stories = [
-	'Hello!',
-	'I am a cat, your storyteller.',
-	'I am here to help you understand the world',
-	'It is a fictional world, but a world nonetheless.'
+	'It looks like your trying to read this website',
+	'Would you like help with that?',
+	'If so keep scrolling',
+	'Thank you for scrolling to the end :) '
 ];
 
 let catDiv = document.getElementById('cat-div');
@@ -64,7 +64,8 @@ function changeText(){
 	// Set the text of cat-text element depending on which section the user has currently scrolled to
 	catText.innerHTML = stories[sectionNum];
 	// Map vertical scroll position to the horizontal position of the cat
-	catDiv.style.left = pos / (height * 4) * width + 'px';
+	catDiv.style.top = (pos / (height * 9) * width) +80 + 'px';
+
 
 	// Fix color of navigation button
 	// Set all button color to white

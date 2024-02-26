@@ -3,7 +3,7 @@ html{
 	height: 100%;
 	/* Hide horizontal scroll */
 	overflow-x: hidden;
-	font-family: 'Times New Roman', Times, serif;
+	font-family: 'Helvetica', sans-serif;
 }
 
 body{
@@ -11,6 +11,12 @@ body{
 	height: 100%;
 	margin: 0px;
 }
+
+#top-banner {
+	background-color: lightblue;
+	
+}
+
 
 /* 
 Navigation Bar 
@@ -30,7 +36,7 @@ Navigation Bar
     height: 20px;
     /* Make square div into a circle */
     border-radius: 50%;
-    background-color: red;
+    background-color: white;
     border: 1px solid black;
     display: inline-block;
     cursor: pointer;
@@ -43,22 +49,17 @@ Navigation Bar
 	background-color: black;
 }
 
-.nav-btn:active {
-	background-color: blue;
-}
-
 /* 
 Cat Div
 */
 #cat-div{
 	/* Fix cat div in the bottom left corner of the web page */
-
-	/* position:fixed is why the cat is not moving */
-	position: fixed; 
+	position: fixed;
 	bottom: 0px;
-	left: 0px;
+	left: 0;
 	width: 300px;
-	text-align: center;
+	text-align: left;
+	padding-left: 30px;
 }
 
 #cat{
@@ -67,8 +68,8 @@ Cat Div
 }
 
 #cat-text{
-	color: white;
-	background-color: black;
+	color: black;
+	background-color: #e7de8b;
 	font-size: 32px;
 }
 
@@ -86,12 +87,12 @@ Parallax: Mountain and Ocean sections;
 
 #mountain{
 	/* Set background image of mountain section using url() function */
-	background-image: url('img/mountain.jpg');
+	background-image: url('img/10flightrecorder-tmpl-superJumbo.png');
 }
 
 #ocean{
 	/* Set background image of ocean section using url() function */
-	background-image: url('img/ocean.jpg');
+	background-image: url('img/verysafe.jpg');
 }
 
 /* 
@@ -99,10 +100,12 @@ Flower div inside Mountain section
 */
 #flower-div{
     position: relative;
-    width: 150px;
+    width: 300px;
     text-align: center;
+	/* -webkit-text-stroke-width: 5px; */
+	-webkit-text-stroke: 2px white;
     top: calc(100% - 300px);
-    left: calc(50% - 75px);
+    left: calc(50% - 150px);
 }
 
 #flower{
@@ -111,7 +114,9 @@ Flower div inside Mountain section
 }
 
 #flower-text{
-	color: white;
+	color: black;
+	font-weight: bold;
+	font-size: 50px;
 }
 
 /* 
@@ -119,21 +124,24 @@ Fish div inside Ocean section
 */
 #fish-div{
     position: relative;
-    width: 180px;
+    width: 200px;
     text-align: center;
-    left: calc(50% - 90px);
+    left: calc(50% - 100px);
 }
 
 #fish-text{
 	color: black;
-	background: white;
+	/* background: white; */
+	-webkit-text-stroke: 1px white;
+	font-size: 64px;
+	font-weight: bold;
 }
 
 #fish{
-    width: 75px;
+    width: 140px;
     display: block;
     margin: auto;
-    transform: rotate(-10deg);
+    transform: rotate(-20deg);
 }
 
 /* 
@@ -149,4 +157,8 @@ Text sections after Mountain and Ocean sections
 
 .text{
 	width: 70%;
+}
+
+#final {
+	display:inline-block;
 }
